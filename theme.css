@@ -1,4 +1,4 @@
-:root {
+:root  {
     --background: #0a0a0a;
     --foreground: #fafafa;
     --card: #171717;
@@ -8,29 +8,24 @@
     --graph-node: #ffc799;
     --graph-node-unresolved: #99ffe4;
     --graph-node-focused: #fdba74;
-
     --primary: #e5e5e5;
     --primary-foreground: #171717;
     --secondary: #262626;
     --secondary-foreground: #fafafa;
     --destructive: #ff6467;
-
     --muted: #262626;
     --muted-foreground: #a1a1a1;
     --accent: #262626;
     --accent-foreground: #fafafa;
-
     --border: #262626;
     --input: rgb(255 255 255 / 15%);
     --ring: #a1a1a1;
     --radius: 0.5em;
-
     --chart-1: #1447e6;
     --chart-2: #00bc7d;
     --chart-3: #fe9a00;
     --chart-4: #ad46ff;
     --chart-5: #ff2056;
-
     --sidebar: #171717;
     --sidebar-foreground: #fafafa;
     --sidebar-primary: #1447e6;
@@ -39,19 +34,16 @@
     --sidebar-accent-foreground: #fafafa;
     --sidebar-border: #262626;
     --sidebar-ring: #a1a1a1;
-
     --font-sans: 'Geist', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', 'Noto Sans', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-text: 'Geist', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', 'Noto Sans', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-heading: var(--font-text);
     --font-mono: 'Geist Mono', ui-monospace, sfmono-regular, menlo, monaco, consolas, 'Liberation Mono', 'Courier New', monospace;
-
     --typeset-size: 15px;
     --typeset-leading: 1.75;
     --typeset-flow: 1.25em;
     --typeset-measure: 80ch;
     --typeset-muted: var(--muted-foreground);
     --typeset-rule: var(--border);
-
     --void-text-2: #606060;
     --void-accent: #d3d3d3;
     --void-accent-glow: #d3d3d3;
@@ -60,7 +52,6 @@
     --void-titlebar-text: #707070;
     --void-titlebar-text-focused: #e8e8e8;
     --void-link-border-hover: rgb(255 255 255 / 70%);
-
     --font-text-size: var(--typeset-size);
     --line-height-normal: var(--typeset-leading);
 }
@@ -68,7 +59,6 @@
 .theme-dark {
     --void-accent: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
     --void-accent-glow: hsl(var(--accent-h) var(--accent-s) calc(var(--accent-l) + 8%));
-
     --background-primary: var(--background);
     --background-primary-alt: var(--background);
     --background-secondary: var(--sidebar);
@@ -82,15 +72,13 @@
     --border-width: 1px;
     --menu-radius: var(--radius-s);
     --menu-border-width: 0.5px;
-
     --text-normal: var(--foreground);
     --text-muted: var(--muted-foreground);
     --text-faint: var(--muted-foreground);
     --text-accent: var(--foreground);
-    --text-accent-hover: #ffffff;
+    --text-accent-hover: #fff;
     --text-selection: var(--checkbox-color);
     --text-highlight-bg: rgb(255 255 255 / 10%);
-
     --font-text-theme: var(--font-text);
     --font-heading-theme: var(--font-heading);
     --font-monospace-theme: var(--font-mono);
@@ -100,82 +88,79 @@
     --line-height-tight: 1.3;
     --file-line-width: var(--typeset-measure);
     --file-margins-x: var(--size-4-4);
-
     --p-spacing: var(--typeset-flow);
     --heading-spacing: calc(var(--typeset-flow) * 1.4);
-
     --h1-size: 1.75em;
     --h2-size: 1.25em;
     --h3-size: 1.125em;
     --h4-size: 1em;
     --h5-size: 0.875em;
     --h6-size: 0.8125em;
-
     --h1-line-height: 1.3;
     --h2-line-height: 1.4;
     --h3-line-height: 1.45;
     --h4-line-height: 1.5;
     --h5-line-height: 1.5;
     --h6-line-height: 1.5;
-
     --h1-weight: 600;
     --h2-weight: 600;
     --h3-weight: 600;
     --h4-weight: 600;
     --h5-weight: 500;
     --h6-weight: 500;
-
     --h1-color: var(--foreground);
     --h2-color: var(--foreground);
     --h3-color: var(--foreground);
     --h4-color: var(--foreground);
     --h5-color: var(--muted-foreground);
     --h6-color: var(--muted-foreground);
-
     --inline-title-size: 2em;
     --inline-title-weight: 600;
     --inline-title-line-height: 1.3;
     --inline-title-color: var(--foreground);
     --inline-title-margin-bottom: calc(2 * var(--line-height-normal) * var(--font-text-size));
-
-    --code-background: var(--muted);
+    --code-background: #161616;
     --code-normal: var(--foreground);
     --code-size: 0.875em;
     --code-line-height: 1.5;
     --code-radius: var(--radius);
     --code-padding: 0.75em 1em;
     --code-comment: var(--muted-foreground);
+    --code-keyword: #ffc799;
+    --code-tag: #ffc799;
+    --code-function: #99ffe4;
+    --code-property: #99ffe4;
+    --code-value: #fdba74;
+    --code-string: #fdba74;
+    --code-important: #fdba74;
+    --code-operator: var(--muted-foreground);
+    --code-punctuation: var(--muted-foreground);
     --inline-code-color: var(--foreground);
     --inline-code-background: var(--muted);
-
     --list-spacing: 0.35em;
     --list-indent: 1.5em;
     --list-marker-color: var(--muted-foreground);
     --list-marker-color-hover: var(--foreground);
     --list-bullet-size: 5px;
-
     --blockquote-border-thickness: 2px;
     --blockquote-border-color: var(--border);
     --blockquote-font-style: normal;
     --blockquote-color: var(--foreground);
     --blockquote-background-color: transparent;
     --blockquote-padding: 0 0 0 1em;
-
     --hr-color: var(--border);
     --hr-thickness: 1px;
-
-    --link-color: #99ffe4;
-    --link-color-hover: #99ffe4;
+    --link-color: #FFB158;
+    --link-color-hover: #FFB158;
     --link-decoration: none;
     --link-decoration-hover: none;
     --link-unresolved-color: #5b9988;
     --link-unresolved-opacity: 1;
-    --link-external-color: #fb923c;
-    --link-external-color-hover: #fdba74;
+    --link-external-color: #99ffe4;
+    --link-external-color-hover: #99ffe4;
     --link-external-decoration: none;
     --link-external-decoration-hover: none;
     --link-weight: 500;
-
     --table-border-width: 1px;
     --table-border-color: var(--border);
     --table-line-height: 1.5;
@@ -190,7 +175,6 @@
     --table-row-background-hover: transparent;
     --table-cell-padding: 0.75em 1em;
     --table-header-padding: 0.65em 1em;
-
     --tag-color: #99ffe4;
     --tag-color-hover: var(--foreground);
     --tag-background: var(--card);
@@ -239,7 +223,7 @@ body {
 
 .markdown-preview-view,
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
-    padding-inline-start: max(var(--size-4-4), calc((100% - var(--file-line-width)) / 4));
+    padding-inline-start: max(var(--size-4-4), calc((100% - var(--file-line-width)) / 2));
 }
 
 .markdown-rendered > :first-child,
@@ -256,13 +240,11 @@ body {
     font-weight: var(--inline-title-weight);
     line-height: var(--inline-title-line-height);
     color: var(--inline-title-color);
-    margin-block-start: 0;
-    margin-block-end: var(--inline-title-margin-bottom);
+    margin-block: 0 var(--inline-title-margin-bottom);
 }
 
 .markdown-rendered p {
-    margin-block-start: var(--typeset-flow);
-    margin-block-end: 0;
+    margin-block: var(--typeset-flow) 0;
 }
 
 .markdown-rendered h1,
@@ -333,13 +315,13 @@ body {
     color: inherit;
     font-weight: 500;
     text-decoration-line: underline;
-    text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
+    text-decoration-color: color-mix(in oklab, currentcolor 30%, transparent);
 }
 
 .markdown-rendered a:hover,
 .cm-link:hover,
 .cm-hmd-internal-link:hover {
-    text-decoration-color: currentColor;
+    text-decoration-color: currentcolor;
 }
 
 .markdown-rendered a:focus-visible {
@@ -350,24 +332,29 @@ body {
 
 a.internal-link,
 .markdown-rendered .internal-link {
-    color: #99ffe4;
+    color: #FFB158;
     text-decoration: none;
 }
 
 a.internal-link:hover,
 .markdown-rendered .internal-link:hover {
-    color: #99ffe4;
+    color: #FFB158;
     text-decoration: none;
 }
 
 a.internal-link.is-unresolved,
 .markdown-rendered .internal-link.is-unresolved {
-    color: #5b9988;
+    color: #ffc799;
+}
+
+a.internal-link.is-unresolved:hover,
+.markdown-rendered .internal-link.is-unresolved:hover {
+    color: #ffc799;
 }
 
 a.external-link,
 .markdown-rendered .external-link {
-    color: #fb923c;
+    color: #99ffe4;
     background-image: none;
     padding-right: 0;
     text-decoration: none;
@@ -375,7 +362,7 @@ a.external-link,
 
 a.external-link:hover,
 .markdown-rendered .external-link:hover {
-    color: #fdba74;
+    color: #99ffe4;
     text-decoration: none;
 }
 
@@ -395,8 +382,7 @@ a.external-link:hover,
 
 .markdown-rendered ul,
 .markdown-rendered ol {
-    margin-block-start: var(--typeset-flow);
-    margin-block-end: 0;
+    margin-block: var(--typeset-flow) 0;
     padding-inline-start: 1.5em;
 }
 
@@ -467,8 +453,7 @@ a.external-link:hover,
     border-radius: var(--code-radius);
     padding: var(--code-padding);
     overflow-x: auto;
-    margin-block-start: calc(var(--typeset-flow) / 0.875);
-    margin-block-end: calc(var(--typeset-flow) / 0.875);
+    margin-block: calc(var(--typeset-flow) / 0.875) calc(var(--typeset-flow) / 0.875);
     border: none;
 }
 
@@ -482,8 +467,246 @@ a.external-link:hover,
     color: inherit;
 }
 
+.markdown-rendered pre[class*="language-"]:not(.frontmatter)::before {
+    content: var(--code-lang, none);
+    display: block;
+    margin: -0.75em -1em 0.75em;
+    padding: 0.5em 1em;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--muted-foreground);
+    border-bottom: 1px solid var(--border);
+}
+
+.markdown-rendered pre.language-bash,
+.markdown-rendered pre.language-sh,
+.markdown-rendered pre.language-shell,
+.markdown-rendered pre.language-zsh,
+.markdown-rendered pre.language-fish {
+    --code-lang: "Bash";
+}
+
+.markdown-rendered pre.language-js,
+.markdown-rendered pre.language-javascript {
+    --code-lang: "JavaScript";
+}
+
+.markdown-rendered pre.language-jsx {
+    --code-lang: "JSX";
+}
+
+.markdown-rendered pre.language-ts,
+.markdown-rendered pre.language-typescript {
+    --code-lang: "TypeScript";
+}
+
+.markdown-rendered pre.language-tsx {
+    --code-lang: "TSX";
+}
+
+.markdown-rendered pre.language-json {
+    --code-lang: "JSON";
+}
+
+.markdown-rendered pre.language-html {
+    --code-lang: "HTML";
+}
+
+.markdown-rendered pre.language-xml,
+.markdown-rendered pre.language-svg {
+    --code-lang: "XML";
+}
+
+.markdown-rendered pre.language-css {
+    --code-lang: "CSS";
+}
+
+.markdown-rendered pre.language-scss,
+.markdown-rendered pre.language-sass {
+    --code-lang: "SCSS";
+}
+
+.markdown-rendered pre.language-less {
+    --code-lang: "Less";
+}
+
+.markdown-rendered pre.language-py,
+.markdown-rendered pre.language-python {
+    --code-lang: "Python";
+}
+
+.markdown-rendered pre.language-rb,
+.markdown-rendered pre.language-ruby {
+    --code-lang: "Ruby";
+}
+
+.markdown-rendered pre.language-go {
+    --code-lang: "Go";
+}
+
+.markdown-rendered pre.language-rs,
+.markdown-rendered pre.language-rust {
+    --code-lang: "Rust";
+}
+
+.markdown-rendered pre.language-java {
+    --code-lang: "Java";
+}
+
+.markdown-rendered pre.language-c {
+    --code-lang: "C";
+}
+
+.markdown-rendered pre.language-cpp,
+.markdown-rendered pre.language-cc {
+    --code-lang: "C++";
+}
+
+.markdown-rendered pre.language-cs,
+.markdown-rendered pre.language-csharp {
+    --code-lang: "C#";
+}
+
+.markdown-rendered pre.language-php {
+    --code-lang: "PHP";
+}
+
+.markdown-rendered pre.language-swift {
+    --code-lang: "Swift";
+}
+
+.markdown-rendered pre.language-kt,
+.markdown-rendered pre.language-kotlin {
+    --code-lang: "Kotlin";
+}
+
+.markdown-rendered pre.language-scala {
+    --code-lang: "Scala";
+}
+
+.markdown-rendered pre.language-dart {
+    --code-lang: "Dart";
+}
+
+.markdown-rendered pre.language-lua {
+    --code-lang: "Lua";
+}
+
+.markdown-rendered pre.language-r {
+    --code-lang: "R";
+}
+
+.markdown-rendered pre.language-sql {
+    --code-lang: "SQL";
+}
+
+.markdown-rendered pre.language-yaml,
+.markdown-rendered pre.language-yml {
+    --code-lang: "YAML";
+}
+
+.markdown-rendered pre.language-toml {
+    --code-lang: "TOML";
+}
+
+.markdown-rendered pre.language-ini {
+    --code-lang: "INI";
+}
+
+.markdown-rendered pre.language-md,
+.markdown-rendered pre.language-markdown {
+    --code-lang: "Markdown";
+}
+
+.markdown-rendered pre.language-tex,
+.markdown-rendered pre.language-latex {
+    --code-lang: "LaTeX";
+}
+
+.markdown-rendered pre.language-mermaid {
+    --code-lang: "Mermaid";
+}
+
+.markdown-rendered pre.language-graphql,
+.markdown-rendered pre.language-gql {
+    --code-lang: "GraphQL";
+}
+
+.markdown-rendered pre.language-docker,
+.markdown-rendered pre.language-dockerfile {
+    --code-lang: "Docker";
+}
+
+.markdown-rendered pre.language-make,
+.markdown-rendered pre.language-makefile {
+    --code-lang: "Makefile";
+}
+
+.markdown-rendered pre.language-diff {
+    --code-lang: "Diff";
+}
+
+.markdown-rendered pre.language-objc,
+.markdown-rendered pre.language-objectivec {
+    --code-lang: "Objective-C";
+}
+
+.markdown-rendered pre.language-vue {
+    --code-lang: "Vue";
+}
+
+.markdown-rendered pre.language-svelte {
+    --code-lang: "Svelte";
+}
+
+.markdown-rendered pre.language-astro {
+    --code-lang: "Astro";
+}
+
+.markdown-rendered pre.language-nix {
+    --code-lang: "Nix";
+}
+
+.markdown-rendered pre.language-asm,
+.markdown-rendered pre.language-assembly,
+.markdown-rendered pre.language-nasm,
+.markdown-rendered pre.language-gas,
+.markdown-rendered pre.language-masm,
+.markdown-rendered pre.language-yasm,
+.markdown-rendered pre.language-fasm,
+.markdown-rendered pre.language-avrasm,
+.markdown-rendered pre.language-x86,
+.markdown-rendered pre.language-x86asm,
+.markdown-rendered pre.language-x86-64,
+.markdown-rendered pre.language-arm,
+.markdown-rendered pre.language-arm64,
+.markdown-rendered pre.language-aarch64,
+.markdown-rendered pre.language-mips,
+.markdown-rendered pre.language-mipsasm,
+.markdown-rendered pre.language-riscv,
+.markdown-rendered pre.language-risc-v {
+    --code-lang: "Assembly";
+}
+
+.markdown-rendered pre.language-text,
+.markdown-rendered pre.language-txt,
+.markdown-rendered pre.language-plain {
+    --code-lang: "Text";
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair {
+    inset-inline: 6px auto;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--muted-foreground);
+}
+
 .markdown-source-view.mod-cm6 .cm-embed-block:has(pre),
-.markdown-source-view.mod-cm6 .HyperMD-codeblock {
+.markdown-source-view.mod-cm6 .hypermd-codeblock {
     font-family: var(--font-mono);
     font-size: var(--code-size);
     line-height: var(--code-line-height);
@@ -491,11 +714,10 @@ a.external-link:hover,
 }
 
 .markdown-rendered blockquote,
-.HyperMD-quote {
+.hypermd-quote {
     border-inline-start: 2px solid var(--border);
     padding-inline-start: 1em;
-    margin-block-start: var(--typeset-flow);
-    margin-block-end: var(--typeset-flow);
+    margin-block: var(--typeset-flow) var(--typeset-flow);
     margin-inline: 0;
     font-style: normal;
     color: var(--foreground);
@@ -511,11 +733,10 @@ a.external-link:hover,
 }
 
 .markdown-rendered hr,
-.HyperMD-hr {
+.hypermd-hr {
     border: 0;
     border-block-start: 1px solid var(--border);
-    margin-block-start: calc(var(--typeset-flow) * 2.4);
-    margin-block-end: 0;
+    margin-block: calc(var(--typeset-flow) * 2.4) 0;
 }
 
 .markdown-rendered hr + h1,
@@ -536,8 +757,7 @@ a.external-link:hover,
     border-spacing: 0;
     border: none;
     border-block-end: 1px solid var(--border);
-    margin-block-start: var(--typeset-flow);
-    margin-block-end: var(--typeset-flow);
+    margin-block: var(--typeset-flow) var(--typeset-flow);
 }
 
 .markdown-rendered thead th,
@@ -596,10 +816,8 @@ a.external-link:hover,
 .markdown-rendered math[display="block"],
 .markdown-rendered .math-block,
 .cm-math.cm-embed-block {
-    margin-block-start: var(--typeset-flow);
-    margin-block-end: var(--typeset-flow);
-    overflow-x: auto;
-    overflow-y: hidden;
+    margin-block: var(--typeset-flow) var(--typeset-flow);
+    overflow: auto hidden;
     padding-block: 0.25em;
 }
 
@@ -698,6 +916,7 @@ a.external-link:hover,
 .callout[data-callout="poem"] {
     --callout-color: 158, 158, 158;
     --callout-icon: lucide-bird;
+
     border-radius: 0.5rem;
 }
 
@@ -755,14 +974,14 @@ a.external-link:hover,
 }
 
 .markdown-rendered .callout {
-    margin-block-start: var(--typeset-flow);
-    margin-block-end: var(--typeset-flow);
+    margin-block: var(--typeset-flow) var(--typeset-flow);
 }
 
 .callout[data-callout="box"] {
   --callout-color: #2fffbd;
   --callout-border-width: 1px;
   --callout-border-opacity: 5;
+
   border-radius: 1rem;
 }
 
@@ -773,9 +992,82 @@ a.external-link:hover,
 .callout[data-callout="box"] .callout-content {
   padding-bottom: 15px;
   color: #c8d8d4;
-  opacity: 80%;
+  opacity: 0.8;
   font-size: 0.95rem;
 }
+
+/* Code syntax highlighting - CodeMirror 6 */
+.cm-s-obsidian .hypermd-codeblock .cm-comment,
+.cm-s-obsidian .cm-line .cm-comment {
+    color: var(--code-comment);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-keyword,
+.cm-s-obsidian .cm-line .cm-keyword {
+    color: var(--code-keyword);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-operator,
+.cm-s-obsidian .cm-line .cm-operator {
+    color: var(--code-operator);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-string,
+.cm-s-obsidian .hypermd-codeblock .cm-string-2,
+.cm-s-obsidian .cm-line .cm-string,
+.cm-s-obsidian .cm-line .cm-string-2 {
+    color: var(--code-string);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-number,
+.cm-s-obsidian .cm-line .cm-number {
+    color: var(--code-value);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-variable,
+.cm-s-obsidian .hypermd-codeblock .cm-variable-2,
+.cm-s-obsidian .hypermd-codeblock .cm-variable-3,
+.cm-s-obsidian .cm-line .cm-variable,
+.cm-s-obsidian .cm-line .cm-variable-2,
+.cm-s-obsidian .cm-line .cm-variable-3 {
+    color: var(--code-function);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-property,
+.cm-s-obsidian .cm-line .cm-property {
+    color: var(--code-property);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-def,
+.cm-s-obsidian .cm-line .cm-def {
+    color: var(--code-function);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-type,
+.cm-s-obsidian .cm-line .cm-type {
+    color: var(--code-tag);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-atom,
+.cm-s-obsidian .cm-line .cm-atom {
+    color: var(--code-value);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-builtin,
+.cm-s-obsidian .cm-line .cm-builtin {
+    color: var(--code-keyword);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-tag,
+.cm-s-obsidian .cm-line .cm-tag {
+    color: var(--code-tag);
+}
+
+.cm-s-obsidian .hypermd-codeblock .cm-meta,
+.cm-s-obsidian .cm-line .cm-meta {
+    color: var(--code-normal);
+}
+
 .graph-view.color-fill-unresolved {
     color: #99ffe4;
     opacity: 1;
@@ -794,4 +1086,25 @@ a.external-link:hover,
 .metadata-property-value[data-property-type="tags"] .multi-select-pill {
     --pill-color: #99ffe4;
     --pill-color-hover: #99ffe4;
+}
+
+
+.tooltip {
+    display: none !important;
+}
+
+.tooltip,
+.cm-tooltip,
+.hover-popover,
+.popover {
+    display: none !important;
+}
+
+.workspace-tab-header[data-tooltip],
+.workspace-tab-header-inner[data-tooltip] {
+    pointer-events: auto;
+}
+.workspace-tab-header::after,
+.workspace-tab-header::before {
+    display: none !important;
 }
