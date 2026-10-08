@@ -5,6 +5,9 @@
     --card-foreground: #fafafa;
     --popover: #171717;
     --popover-foreground: #fafafa;
+    --graph-node: #ffc799;
+    --graph-node-unresolved: #99ffe4;
+    --graph-node-focused: #fdba74;
 
     --primary: #e5e5e5;
     --primary-foreground: #171717;
@@ -161,14 +164,16 @@
     --hr-color: var(--border);
     --hr-thickness: 1px;
 
-    --link-color: var(--foreground);
-    --link-color-hover: var(--foreground);
-    --link-decoration: underline;
-    --link-decoration-hover: underline;
-    --link-external-color: var(--foreground);
-    --link-external-color-hover: var(--foreground);
-    --link-external-decoration: underline;
-    --link-external-decoration-hover: underline;
+    --link-color: #99ffe4;
+    --link-color-hover: #99ffe4;
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-unresolved-color: #5b9988;
+    --link-unresolved-opacity: 1;
+    --link-external-color: #fb923c;
+    --link-external-color-hover: #fdba74;
+    --link-external-decoration: none;
+    --link-external-decoration-hover: none;
     --link-weight: 500;
 
     --table-border-width: 1px;
@@ -186,11 +191,11 @@
     --table-cell-padding: 0.75em 1em;
     --table-header-padding: 0.65em 1em;
 
-    --tag-color: var(--muted-foreground);
+    --tag-color: #99ffe4;
     --tag-color-hover: var(--foreground);
     --tag-background: var(--card);
     --tag-background-hover: var(--accent);
-    --tag-border-color: var(--border);
+    --tag-border-color: #99ffe4;
     --tag-border-color-hover: var(--void-link-border-hover);
     --titlebar-text-color: var(--void-titlebar-text);
     --titlebar-text-color-focused: var(--void-titlebar-text-focused);
@@ -343,9 +348,35 @@ body {
     border-radius: 0.125em;
 }
 
+a.internal-link,
+.markdown-rendered .internal-link {
+    color: #99ffe4;
+    text-decoration: none;
+}
+
+a.internal-link:hover,
+.markdown-rendered .internal-link:hover {
+    color: #99ffe4;
+    text-decoration: none;
+}
+
+a.internal-link.is-unresolved,
+.markdown-rendered .internal-link.is-unresolved {
+    color: #5b9988;
+}
+
+a.external-link,
 .markdown-rendered .external-link {
+    color: #fb923c;
     background-image: none;
     padding-right: 0;
+    text-decoration: none;
+}
+
+a.external-link:hover,
+.markdown-rendered .external-link:hover {
+    color: #fdba74;
+    text-decoration: none;
 }
 
 .markdown-rendered strong,
@@ -744,4 +775,23 @@ body {
   color: #c8d8d4;
   opacity: 80%;
   font-size: 0.95rem;
+}
+.graph-view.color-fill-unresolved {
+    color: #99ffe4;
+    opacity: 1;
+}
+
+.graph-view.color-fill {
+    color: #ffc799;
+}
+
+.graph-view.color-fill-focused {
+    color: #fdba74;
+}
+
+.multi-select-pill,
+.metadata-property-value .multi-select-pill,
+.metadata-property-value[data-property-type="tags"] .multi-select-pill {
+    --pill-color: #99ffe4;
+    --pill-color-hover: #99ffe4;
 }
