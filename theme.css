@@ -38,7 +38,8 @@
     --sidebar-ring: #a1a1a1;
 
     --font-sans: 'Geist', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', 'Noto Sans', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-heading: var(--font-sans);
+    --font-text: 'Geist', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', 'Noto Sans', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-heading: var(--font-text);
     --font-mono: 'Geist Mono', ui-monospace, sfmono-regular, menlo, monaco, consolas, 'Liberation Mono', 'Courier New', monospace;
 
     --typeset-size: 15px;
@@ -87,10 +88,10 @@
     --text-selection: var(--checkbox-color);
     --text-highlight-bg: rgb(255 255 255 / 10%);
 
-    --font-text-theme: var(--font-sans);
+    --font-text-theme: var(--font-text);
     --font-heading-theme: var(--font-heading);
     --font-monospace-theme: var(--font-mono);
-    --default-font: var(--font-sans);
+    --default-font: var(--font-text);
     --font-text-size: var(--typeset-size);
     --line-height-normal: var(--typeset-leading);
     --line-height-tight: 1.3;
@@ -144,7 +145,7 @@
     --inline-code-color: var(--foreground);
     --inline-code-background: var(--muted);
 
-    --list-spacing: 0.5em;
+    --list-spacing: 0.35em;
     --list-indent: 1.5em;
     --list-marker-color: var(--muted-foreground);
     --list-marker-color-hover: var(--foreground);
@@ -369,14 +370,14 @@ body {
 }
 
 .markdown-rendered li {
-    margin-block-start: 0.5em;
+    margin-block-start: 0.3em;
     padding-inline-start: 0.4em;
 }
 
 .markdown-rendered li > p,
 .markdown-rendered li > ul,
 .markdown-rendered li > ol {
-    margin-block-start: 0.5em;
+    margin-block-start: 0.3em;
 }
 
 .markdown-rendered li.task-list-item {
@@ -405,11 +406,11 @@ body {
 
 .markdown-rendered li > blockquote,
 .markdown-rendered li > table {
-    margin-block-start: 0.5em;
+    margin-block-start: 0.3em;
 }
 
 .markdown-rendered li > pre {
-    margin-block-start: calc(0.5em / 0.875);
+    margin-block-start: calc(0.3em / 0.875);
 }
 
 .markdown-rendered :not(pre) > code,
@@ -436,7 +437,7 @@ body {
     padding: var(--code-padding);
     overflow-x: auto;
     margin-block-start: calc(var(--typeset-flow) / 0.875);
-    margin-block-end: 0;
+    margin-block-end: calc(var(--typeset-flow) / 0.875);
     border: none;
 }
 
@@ -463,7 +464,7 @@ body {
     border-inline-start: 2px solid var(--border);
     padding-inline-start: 1em;
     margin-block-start: var(--typeset-flow);
-    margin-block-end: 0;
+    margin-block-end: var(--typeset-flow);
     margin-inline: 0;
     font-style: normal;
     color: var(--foreground);
@@ -505,7 +506,7 @@ body {
     border: none;
     border-block-end: 1px solid var(--border);
     margin-block-start: var(--typeset-flow);
-    margin-block-end: 0;
+    margin-block-end: var(--typeset-flow);
 }
 
 .markdown-rendered thead th,
@@ -565,7 +566,7 @@ body {
 .markdown-rendered .math-block,
 .cm-math.cm-embed-block {
     margin-block-start: var(--typeset-flow);
-    margin-block-end: 0;
+    margin-block-end: var(--typeset-flow);
     overflow-x: auto;
     overflow-y: hidden;
     padding-block: 0.25em;
@@ -580,6 +581,10 @@ body {
     display: none;
 }
 
+.nav-files-container {
+    padding-inline: 30px;
+}
+
 .nav-files-container .tree-item-children,
 [data-type="outline"] .tree-item-children {
     --nav-indentation-guide-width: 0px;
@@ -589,6 +594,8 @@ body {
 [data-type="outline"] .tree-item-self {
     margin-inline: var(--size-4-1);
     padding-inline: calc(var(--size-4-6) - var(--size-4-1)) calc(var(--size-4-2) - var(--size-4-1));
+    font-size: calc(var(--font-ui-small) * 1.025);
+    color: var(--text-muted);
 }
 
 .nav-files-container .tree-item-self.is-active,
@@ -717,6 +724,24 @@ body {
 }
 
 .markdown-rendered .callout {
-    margin-block-start: calc(var(--typeset-flow) * 2);
-    margin-block-end: 0;
+    margin-block-start: var(--typeset-flow);
+    margin-block-end: var(--typeset-flow);
+}
+
+.callout[data-callout="box"] {
+  --callout-color: #2fffbd;
+  --callout-border-width: 1px;
+  --callout-border-opacity: 5;
+  border-radius: 1rem;
+}
+
+.callout[data-callout="box"] .callout-title {
+  display: none;
+}
+
+.callout[data-callout="box"] .callout-content {
+  padding-bottom: 15px;
+  color: #c8d8d4;
+  opacity: 80%;
+  font-size: 0.95rem;
 }
