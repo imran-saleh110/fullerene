@@ -656,3 +656,67 @@ body {
 .status-bar {
     display: none;
 }
+
+.callout[data-callout="poem"] {
+    --callout-color: 158, 158, 158;
+    --callout-icon: lucide-bird;
+    border-radius: 0.5rem;
+}
+
+.callout[data-callout="poem"] .callout-title {
+    display: none;
+}
+
+.callout[data-callout="poem"] .callout-content {
+    text-align: center;
+    margin-right: 33px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.callout[data-callout="quote"] {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.callout[data-callout="quote"] .callout-title {
+    display: none;
+}
+
+.callout[data-callout="quote"]:has(.callout-title-inner) {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.callout[data-callout="quote"]:has(.callout-title-inner) .callout-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 0.5em;
+    padding-right: 0.5em;
+    border: none;
+    background: transparent;
+}
+
+.callout[data-callout="quote"]:has(.callout-title-inner) .callout-title .callout-icon {
+    display: none;
+}
+
+.callout[data-callout="quote"] .callout-content {
+    border-inline-start: 2px solid var(--border);
+    padding: 0.5em 1em;
+    margin: 0;
+    font-style: normal;
+    color: var(--foreground);
+    background-color: transparent;
+}
+
+.markdown-rendered .callout {
+    margin-block-start: calc(var(--typeset-flow) * 2);
+    margin-block-end: 0;
+}
