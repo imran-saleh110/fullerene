@@ -12,9 +12,6 @@ A dark [Obsidian](https://obsidian.md) theme with clean, web-component-inspired 
 
 ## Video Demo
 
-<video src="screenshots/demo.mp4" controls></video>
-
-[Watch the full demo](screenshots/demo.mp4)
 
 ## Features
 
