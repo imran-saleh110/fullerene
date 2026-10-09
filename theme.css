@@ -5,9 +5,6 @@
     --card-foreground: #fafafa;
     --popover: #171717;
     --popover-foreground: #fafafa;
-    --graph-node: #ffc799;
-    --graph-node-unresolved: #99ffe4;
-    --graph-node-focused: #fdba74;
     --primary: #e5e5e5;
     --primary-foreground: #171717;
     --secondary: #262626;
@@ -59,6 +56,9 @@
 .theme-dark {
     --void-accent: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
     --void-accent-glow: hsl(var(--accent-h) var(--accent-s) calc(var(--accent-l) + 8%));
+    --graph-node: #ffc799;
+    --graph-node-unresolved: #99ffe4;
+    --graph-node-focused: #fdba74;
     --background-primary: var(--background);
     --background-primary-alt: var(--background);
     --background-secondary: var(--sidebar);
@@ -196,7 +196,6 @@ body {
     --accent-h: 0;
     --accent-s: 0%;
     --accent-l: 83%;
-
     font-family: var(--font-sans);
     font-size: var(--font-text-size);
     line-height: var(--line-height-normal);
@@ -363,6 +362,13 @@ a.external-link,
 a.external-link:hover,
 .markdown-rendered .external-link:hover {
     color: #99ffe4;
+    text-decoration: none;
+}
+
+.markdown-rendered a.tag,
+.markdown-rendered a.tag:hover {
+    color: var(--tag-color);
+    font-weight: inherit;
     text-decoration: none;
 }
 
@@ -1079,6 +1085,11 @@ a.external-link:hover,
 
 .graph-view.color-fill-focused {
     color: #fdba74;
+}
+
+.is-flashing {
+  background-color: var(--highlightColor, var(--graph-node)) !important;
+  color: #000000 !important;
 }
 
 .multi-select-pill,
