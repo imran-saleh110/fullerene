@@ -13,6 +13,10 @@ A dark [Obsidian](https://obsidian.md) theme with clean, web-component-inspired 
 ## Video Demo
 
 
+https://github.com/user-attachments/assets/7fb98d0a-1058-43e1-9711-12994f6475ce
+
+
+
 ## Features
 
 - Refined typography for Latin, Bangla, Urdu/Persian (Nastaliq), and Arabic
