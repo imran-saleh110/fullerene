@@ -196,6 +196,7 @@ body {
     --accent-h: 0;
     --accent-s: 0%;
     --accent-l: 83%;
+
     font-family: var(--font-sans);
     font-size: var(--font-text-size);
     line-height: var(--line-height-normal);
@@ -427,15 +428,6 @@ a.external-link:hover,
     display: block;
 }
 
-.markdown-rendered li > blockquote,
-.markdown-rendered li > table {
-    margin-block-start: 0.3em;
-}
-
-.markdown-rendered li > pre {
-    margin-block-start: calc(0.3em / 0.875);
-}
-
 .markdown-rendered :not(pre) > code,
 .cm-s-obsidian span.cm-inline-code,
 .cm-inline-code {
@@ -461,6 +453,10 @@ a.external-link:hover,
     overflow-x: auto;
     margin-block: calc(var(--typeset-flow) / 0.875) calc(var(--typeset-flow) / 0.875);
     border: none;
+}
+
+.markdown-rendered li > pre {
+    margin-block-start: calc(0.3em / 0.875);
 }
 
 .markdown-rendered pre > code {
@@ -730,6 +726,10 @@ a.external-link:hover,
     background-color: transparent;
 }
 
+.markdown-rendered li > blockquote {
+    margin-block-start: 0.3em;
+}
+
 .markdown-rendered blockquote > :first-child {
     margin-block-start: 0;
 }
@@ -764,6 +764,10 @@ a.external-link:hover,
     border: none;
     border-block-end: 1px solid var(--border);
     margin-block: var(--typeset-flow) var(--typeset-flow);
+}
+
+.markdown-rendered li > table {
+    margin-block-start: 0.3em;
 }
 
 .markdown-rendered thead th,
@@ -926,7 +930,8 @@ a.external-link:hover,
     border-radius: 0.5rem;
 }
 
-.callout[data-callout="poem"] .callout-title {
+.callout[data-callout="poem"] .callout-title,
+.callout[data-callout="box"] .callout-title {
     display: none;
 }
 
@@ -989,10 +994,6 @@ a.external-link:hover,
   --callout-border-opacity: 5;
 
   border-radius: 1rem;
-}
-
-.callout[data-callout="box"] .callout-title {
-  display: none;
 }
 
 .callout[data-callout="box"] .callout-content {
@@ -1088,8 +1089,8 @@ a.external-link:hover,
 }
 
 .is-flashing {
-  background-color: var(--highlightColor, var(--graph-node)) !important;
-  color: #000000 !important;
+  background-color: var(--highlight-color, var(--graph-node)) !important;
+  color: #000 !important;
 }
 
 .multi-select-pill,
@@ -1115,6 +1116,7 @@ a.external-link:hover,
 .workspace-tab-header-inner[data-tooltip] {
     pointer-events: auto;
 }
+
 .workspace-tab-header::after,
 .workspace-tab-header::before {
     display: none !important;
