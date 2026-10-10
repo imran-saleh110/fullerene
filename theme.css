@@ -1106,9 +1106,7 @@ a.external-link:hover,
 }
 
 .tooltip,
-.cm-tooltip,
-.hover-popover,
-.popover {
+.cm-tooltip {
     display: none !important;
 }
 
