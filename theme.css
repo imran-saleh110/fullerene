@@ -1119,3 +1119,122 @@ a.external-link:hover,
 .workspace-tab-header::before {
     display: none !important;
 }
+
+
+.workspace-leaf-content[data-type="bases"],
+.workspace-leaf-content[data-type="bases-query"],
+.block-language-base,
+.bases-embed {
+    --bases-header-height: 42px;
+    --bases-header-border-width: 0 0 1px 0;
+    --bases-header-padding-start: var(--size-4-3);
+    --bases-header-padding-end: var(--size-4-3);
+    --bases-table-font-size: 0.9375em;
+    --bases-table-row-height: 38px;
+    --bases-table-header-background: var(--background);
+    --bases-table-header-color: var(--muted-foreground);
+    --bases-table-header-weight: 500;
+    --bases-table-header-background-hover: var(--accent);
+    --bases-table-border-color: var(--border);
+    --bases-table-row-border-width: 1px;
+    --bases-table-column-border-width: 0;
+    --bases-table-row-background-hover: var(--accent);
+    --bases-table-group-background: var(--background);
+    --bases-table-summary-background: var(--background);
+    --bases-table-cell-background-active: var(--background);
+    --bases-table-cell-edge-padding: var(--size-4-2);
+    --bases-table-cell-radius-active: var(--radius-s);
+    --bases-table-cell-shadow-active: 0 0 0 2px var(--ring);
+    --bases-table-cell-shadow-focus: 0 0 0 2px var(--ring);
+    --bases-table-cell-background-selected: color-mix(in oklab, var(--ring) 25%, transparent);
+    --bases-cards-background: var(--card);
+    --bases-cards-container-background: transparent;
+    --bases-cards-cover-background: var(--muted);
+    --bases-cards-radius: 5px;
+    --bases-cards-shadow: 0 0 0 1px transparent;
+    --bases-cards-shadow-hover: 0 0 0 1px var(--border);
+    --bases-cards-line-height: 24px;
+    --bases-group-heading-property-color: var(--muted-foreground);
+    --bases-group-heading-property-size: 0.75em;
+    --bases-group-heading-value-color: var(--foreground);
+    --bases-group-heading-value-size: 0.9375em;
+    --bases-group-heading-value-weight: 600;
+    --bases-filter-input-background: var(--muted);
+    --bases-embed-border-width: 1px;
+    --bases-embed-border-color: var(--border);
+    --bases-embed-border-radius: var(--radius);
+    --bases-embed-padding: 0;
+}
+
+.workspace-leaf-content[data-type="bases"] {
+    --bases-table-container-border-width: 0;
+    --bases-table-container-border-radius: 0;
+}
+
+.bases-table-header-label {
+    color: var(--muted-foreground);
+    letter-spacing: 0.01em;
+}
+
+.bases-table-header-name {
+    font-weight: 500;
+}
+
+.bases-td:focus-within {
+    border-radius: var(--radius-s);
+}
+
+.bases-table-summary-cell,
+.bases-table-group-summary-row.bases-tr {
+    color: var(--muted-foreground);
+}
+
+.bases-list-item .bases-list-property a {
+    font-weight: 500;
+}
+
+.bases-cards-item {
+    transition: box-shadow var(--anim-duration-fast) ease-in-out;
+    padding-bottom: 8px;
+}
+
+.bases-cards-property.mod-title {
+    --link-color: var(--foreground);
+    --link-color-hover: var(--foreground);
+    --link-unresolved-color: var(--foreground);
+}
+
+.bases-cards-property.mod-title .bases-cards-line {
+    font-size: 0.9375em;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--graph-node-focused);
+}
+
+.bases-cards-item:hover .bases-cards-property.mod-title .bases-cards-line a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: currentcolor;
+}
+
+.bases-cards-label {
+    display: none;
+}
+
+.bases-group-heading {
+    color: var(--muted-foreground);
+}
+
+.bases-group-heading .bases-group-value {
+    color: var(--foreground);
+}
+
+.bases-toolbar-result-count {
+    color: var(--muted-foreground);
+    font-size: 0.8125em;
+}
+
+.bases-search-row input[type="search"] {
+    background-color: var(--muted);
+    border-radius: var(--radius-s);
+}
