@@ -1238,3 +1238,12 @@ a.external-link:hover,
     background-color: var(--muted);
     border-radius: var(--radius-s);
 }
+
+.empty-state-hotkey {
+    background-color: var(--background-color);
+}
+
+.empty-state-action.mod-pill {
+    border: none;
+}
+
