@@ -919,10 +919,6 @@ a.external-link:hover,
     background-color: var(--background-primary);
 }
 
-.status-bar {
-    display: none;
-}
-
 .callout[data-callout="poem"] {
     --callout-color: 158, 158, 158;
     --callout-icon: lucide-bird;
