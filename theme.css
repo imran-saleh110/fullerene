@@ -156,8 +156,8 @@
     --link-decoration-hover: none;
     --link-unresolved-color: #5b9988;
     --link-unresolved-opacity: 1;
-    --link-external-color: #99ffe4;
-    --link-external-color-hover: #99ffe4;
+    --link-external-color: var(--interactive-accent);
+    --link-external-color-hover: var(--interactive-accent);
     --link-external-decoration: none;
     --link-external-decoration-hover: none;
     --link-weight: 500;
@@ -354,7 +354,7 @@ a.internal-link.is-unresolved:hover,
 
 a.external-link,
 .markdown-rendered .external-link {
-    color: #99ffe4;
+    color: var(--link-external-color);
     background-image: none;
     padding-right: 0;
     text-decoration: none;
@@ -362,7 +362,7 @@ a.external-link,
 
 a.external-link:hover,
 .markdown-rendered .external-link:hover {
-    color: #99ffe4;
+    color: var(--link-external-color-hover);
     text-decoration: none;
 }
 
